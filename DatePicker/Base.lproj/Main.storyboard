@@ -26,6 +26,9 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dvA-e6-gGf">
                                 <rect key="frame" x="163" y="596" width="88" height="30"/>
                                 <state key="normal" title="Create Event"/>
+                                <connections>
+                                    <segue destination="dCK-FH-Hmv" kind="show" id="Nnw-fZ-8Lb"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="RSVP NO" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZJs-MJ-Jjy">
                                 <rect key="frame" x="171" y="634" width="72" height="21"/>
@@ -62,28 +65,52 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Are you going?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uTP-Tf-NZc">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Are you going?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uTP-Tf-NZc">
                                 <rect key="frame" x="150" y="437.5" width="114" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="TSa-be-Pwp">
-                                <rect key="frame" x="183" y="474" width="49" height="31"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="TSa-be-Pwp">
+                                <rect key="frame" x="182.5" y="478.5" width="51" height="31"/>
                             </switch>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The event is set for" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nBT-5N-FzB">
+                                <rect key="frame" x="101" y="339.5" width="212" height="29"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date of event" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gdq-Hh-ZuH">
+                                <rect key="frame" x="155.5" y="376.5" width="103" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7WB-71-k4d">
+                                <rect key="frame" x="161.5" y="549.5" width="91" height="30"/>
+                                <state key="normal" title="Submit RSVP"/>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstItem="gdq-Hh-ZuH" firstAttribute="centerX" secondItem="b64-z9-hTS" secondAttribute="centerX" id="3Y3-q3-k1B"/>
                             <constraint firstItem="uTP-Tf-NZc" firstAttribute="centerY" secondItem="b64-z9-hTS" secondAttribute="centerY" id="CdG-r0-snJ"/>
+                            <constraint firstItem="7WB-71-k4d" firstAttribute="top" secondItem="TSa-be-Pwp" secondAttribute="bottom" constant="40" id="Eon-9i-0Ug"/>
+                            <constraint firstItem="uTP-Tf-NZc" firstAttribute="top" secondItem="gdq-Hh-ZuH" secondAttribute="bottom" constant="40" id="K7E-kS-eQp"/>
                             <constraint firstItem="uTP-Tf-NZc" firstAttribute="centerX" secondItem="b64-z9-hTS" secondAttribute="centerX" id="Tmt-dp-8f7"/>
+                            <constraint firstItem="gdq-Hh-ZuH" firstAttribute="top" secondItem="nBT-5N-FzB" secondAttribute="bottom" constant="8" id="bkE-R7-H6g"/>
+                            <constraint firstItem="TSa-be-Pwp" firstAttribute="top" secondItem="uTP-Tf-NZc" secondAttribute="bottom" constant="20" id="fN0-sG-fjC"/>
+                            <constraint firstItem="nBT-5N-FzB" firstAttribute="centerX" secondItem="b64-z9-hTS" secondAttribute="centerX" id="nB4-FG-nqM"/>
+                            <constraint firstItem="7WB-71-k4d" firstAttribute="centerX" secondItem="b64-z9-hTS" secondAttribute="centerX" id="qV1-Za-xpJ"/>
+                            <constraint firstItem="TSa-be-Pwp" firstAttribute="centerX" secondItem="b64-z9-hTS" secondAttribute="centerX" id="zN4-Yo-Mc7"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="4Zt-BK-UCR"/>
                     </view>
+                    <navigationItem key="navigationItem" id="JMF-8V-MUF"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Tfe-kV-5db" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1830" y="117"/>
+            <point key="canvasLocation" x="1828.985507246377" y="116.51785714285714"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="hGf-9B-ovg">
